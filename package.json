@@ -27,7 +27,8 @@
     "rxjs": "5.0.0-beta.12",
     "systemjs": "0.19.39",
     "zone.js": "^0.6.25",
-    "mime": "~1.2.7"
+    "mime": "~1.2.7",
+    "express": "4.13.3"
   },
   "devDependencies": {
     "concurrently": "^3.0.0",
@@ -37,6 +38,10 @@
   },
   "engines":{
     "node": "6.7.0"
-  }
-
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+]
 }
