@@ -29,7 +29,7 @@
     "zone.js": "^0.6.25",
     "mime": "~1.2.7",
     "express": "4.13.3",
-    "ejs": "2.4.1",
+    "ejs": "2.4.1"
   },
   "devDependencies": {
     "concurrently": "^3.0.0",
