@@ -23,5 +23,8 @@
     "lite-server": "^2.2.0",
     "typescript": "^1.8.9",
     "typings":"^0.7.12"
-  }
+  },
+  "engines":{
+    "node": "6.7.0"
+  },
 }
