@@ -1,58 +1,18 @@
-# Lib Dependencies #
-###################
-node_modules/*
-typings/*
-tests/js/*
-public/
+.idea
+typings/**
+node_modules
+jspm_packages
+link-checker-results.txt
+**/*npm-debug.log.*
+*.js
+*.js.map
+e2e/**/*.js
+e2e/**/*.js.map
+_test-output
+_temp
 
-# Compiled source #
-###################
-*.com
-*.class
-*.dll
-*.exe
-*.o
-*.so
-*.pyo
-*.pyc
-
-# Packages #
-############
-# it's better to unpack these files and commit the raw source
-# git has its own built in compression methods
-*.7z
-*.dmg
-*.gz
-*.iso
-*.jar
-*.rar
-*.tar
-*.zip
-
-# Logs and databases #
-######################
-*.log
-*.sql
-*.sqlite
-
-# OS generated files #
-######################
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-*.bak
-*.swp
-
-# IDE files #
-#############
-nbproject
-.~lock.*
-.buildpath
-.idea/*
-.project
-.settings
-composer.lock
-*~
+!karma*.js
+!protractor*.js
+!systemjs.config.js
+!typings/typings.d.ts
+!wallaby.js

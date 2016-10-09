@@ -1,32 +1,18 @@
 {
   "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "system",
-    "moduleResolution": "node",
-    "outDir": "public/dist/js",
-    "sourceMap": true,
-    "target": "ES5"
+    "removeComments": false,
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
   },
-  "exclude": [
-    "node_modules"
-  ],
-  "filesGlob": [
-    "src/**/*.ts",
-    "typings/*.d.ts"
-  ],
-  "files": [
-    "typings/index.d.ts",
-    "src/js/components/app.component.ts",
-    "src/js/components/dashboard.component.ts",
-    "src/js/components/hero-detail.component.ts",
-    "src/js/components/heroes-list.component.ts",
-    "src/js/main.ts",
-    "src/js/models/hero.ts",
-    "src/js/services/hero.service.ts",
-    "src/js/services/in-memory-data.service.ts",
-    "src/js/templates/dashboard.html.ts",
-    "src/js/templates/hero-detail.html.ts",
-    "src/js/templates/heroes.html.ts"
+  "filesGlob" : [
+    "**/*.ts",
+    "**/*.tsx",
+    "!node_modules/**"
   ]
 }
