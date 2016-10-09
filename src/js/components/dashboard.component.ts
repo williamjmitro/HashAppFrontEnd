@@ -27,7 +27,7 @@ export class DashboardComponent implements OnInit {
     }
 
     gotoDetail(hero: Hero) {
-        this.router.navigate(['/detail/:id', { id: hero.id }]);
+        this.router.navigate(['/detail/:hasherId', { hasherId: hero.hasherId }]);
     }
 
     ngOnInit() {

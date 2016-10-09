@@ -47,7 +47,7 @@ export class HeroesListComponent implements OnInit {
         this.heroService
             .delete(hero)
             .subscribe(
-                res => this.heroes = this.heroes.filter(h => h.id !== hero.id),
+                res => this.heroes = this.heroes.filter(h => h.hasherId !== hero.hasherId),
                 error => this.error = error // TODO: Display error message
             );
     }
@@ -62,6 +62,6 @@ export class HeroesListComponent implements OnInit {
     }
 
     gotoDetail() {
-        this.router.navigate(['/detail/:id', { id: this.selectedHero.id }]);
+        this.router.navigate(['/detail/:id', { id: this.selectedHero.hasherId }]);
     }
 }

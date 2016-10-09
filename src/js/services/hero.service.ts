@@ -6,7 +6,7 @@ import { Hero } from '../models/hero';
 
 @Injectable()
 export class HeroService {
-    private heroesUrl = 'app/heroes';  // URL to web api
+    private heroesUrl = 'https://hashapppitt.herokuapp.com/hasher/all';  // URL to web api
 
     constructor(private http: Http) { }
 
@@ -18,11 +18,11 @@ export class HeroService {
 
     getHero(id: number): Observable<Hero> {
         return this.getHeroes()
-            .map(heroes => heroes.filter(hero => hero.id === id)[0]);
+            .map(heroes => heroes.filter(hero => hero.hasherId === id)[0]);
     }
 
     save(hero: Hero): Observable<Hero>  {
-        if (hero.id) {
+        if (hero.hasherId) {
             return this.put(hero);
         }
         return this.post(hero);
@@ -32,7 +32,7 @@ export class HeroService {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
-        let url = `${this.heroesUrl}/${hero.id}`;
+        let url = `${this.heroesUrl}/${hero.hasherId}`;
 
         return this.http
             .delete(url, headers);
@@ -53,7 +53,7 @@ export class HeroService {
         let headers = new Headers();
         headers.append('Content-Type', 'application/json');
 
-        let url = `${this.heroesUrl}/${hero.id}`;
+        let url = `${this.heroesUrl}/${hero.hasherId}`;
 
         return this.http
             .put(url, JSON.stringify(hero), {headers: headers})

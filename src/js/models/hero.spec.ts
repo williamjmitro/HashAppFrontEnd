@@ -2,11 +2,11 @@ import { Hero } from './hero';
 
 describe('Hero', () => {
     it('has name', () => {
-        let hero: Hero = {id: 1, name: 'Super Cat'};
-        expect(hero.name).toEqual('Super Cat');
+        let hero: Hero = {hasherId: 1, hashName: 'Super Cat'};
+        expect(hero.hashName).toEqual('Super Cat');
     });
     it('has id', () => {
-        let hero: Hero = {id: 1, name: 'Super Cat'};
-        expect(hero.id).toEqual(1);
+        let hero: Hero = {hasherId: 1, hashName: 'Super Cat'};
+        expect(hero.hasherId).toEqual(1);
     });
 });

@@ -15,11 +15,11 @@ import { HeroService } from '../services/hero.service';
         <nav>
             <!--<a [routerLink]="['/crisis-center']">Crisis Center</a>-->
             <!--<a [routerLink]="['/dashboard']">Dashboard</a>-->
-            <a [routerLink]="['/heroes']">Heroes</a>
+            <a [routerLink]="['/heroes']">Heres</a>
         </nav>
         <router-outlet></router-outlet>
     `,
 })
 export class AppComponent {
-    title = 'Tour of Heroes';
+    title = 'PITT H3';
 }

@@ -1,5 +1,5 @@
 export const htmlTemplate = `
-    <h3>Top Heroes</h3>
+    <h3>Hashers</h3>
     <div class="grid grid-pad">
       <div *ngFor="let hero of heroes" (click)="gotoDetail(hero)" class="col-1-4">
         <div class="module hero">

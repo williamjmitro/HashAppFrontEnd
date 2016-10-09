@@ -1,5 +1,5 @@
 export const htmlTemplate = `
-    <h2>My Heroes</h2>
+    <h2>Hashers</h2>
     <ul class="heroes">
         <li *ngFor="let hero of heroes"
             [class.selected]="hero === selectedHero"
@@ -10,8 +10,8 @@ export const htmlTemplate = `
             <button class="delete-button" (click)="delete(hero, $event)">Delete</button>
         </li>
     </ul>
-    
-    <button (click)="addHero()">Add New Hero</button>
+
+    <button (click)="addHero()">Add New Hasher</button>
     <div *ngIf="addingHero">
         <my-hero-detail (close)="close($event)"></my-hero-detail>
     </div>

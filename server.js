@@ -8,7 +8,7 @@ app.use(express.static(__dirname + '/public'));
 app.get('/app/heroes', function(req, res) {
   res.json([
     {id: 11, name: 'Mr. Nice'},
-    {id: 12, name: 'Narco'},
+    {id: 12, name: 'Test'},
     {id: 13, name: 'Bombasto'},
     {id: 14, name: 'Celeritas'},
     {id: 15, name: 'Magneta'},

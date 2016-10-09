@@ -52,7 +52,7 @@ export class HeroDetailComponent implements OnInit, OnDestroy {
     }
 
     gotoHeroes() {
-        let heroId = this.hero ? this.hero.id : null;
+        let heroId = this.hero ? this.hero.hasherId : null;
         // Pass along the hero id if available
         // so that the HeroList component can select that hero.
         this.router.navigate(['/heroes'], { queryParams: { id: heroId } });
