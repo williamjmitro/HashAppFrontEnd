@@ -11,7 +11,6 @@ export class HasherService{
   }
 
   getAll(): Observable<Hasher[]>{
-    console.log('Test');
     let hasher$ = this.http
       .get(`${this.baseUrl}/all`, {headers: this.getHeaders()})
       .map(mapHashers)
@@ -22,7 +21,6 @@ export class HasherService{
   private getHeaders(){
     let headers = new Headers();
     headers.append('Accept', 'application/json');
-    headers.append('Access-Control-Allow-Origin', '*');
     return headers;
   }
 }
@@ -33,12 +31,13 @@ function mapHashers(response:Response): Hasher[]{
 
    // The response of the API has a results
    // property with the actual results
-   return response.json().results.map(toHasher)
+  //  console.log(response);
+   return response.json().hasherDtos.map(toHasher)
 }
 
 function toHasher(r:any): Hasher{
   let hasher = <Hasher>({
-    hasherId: r.hasherId,
+    hasherId: r.haserId,
     hashName: r.hashName,
   });
   console.log('Parsed Hasher:', hasher);
