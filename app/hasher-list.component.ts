@@ -1,30 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Hasher } from './hasher';
+import { Hasher } from './objects/hasher';
 import { HasherService } from './hasher.service';
 
 @Component({
   selector: 'hasher-list',
-  template: `
-  <section>
-    <section *ngIf="isLoading && !errorMessage">
-    Loading our hyperdrives!!! Retrieving data...
-    </section>
-      <ul>
-        <!-- this is the new syntax for ng-repeat -->
-        <li *ngFor="let hasher of people">
-            <a href="#" [routerLink]="['/hasher', hasher.hasherId]">
-          {{hasher.hashName}}
-          </a>
-        </li>
-      </ul>
-      <section *ngIf="errorMessage">
-        {{errorMessage}}
-      </section>
-  </section>
-  `
+  templateUrl: 'app/html/hash-list.component.html'
 })
 export class HasherListComponent implements OnInit{
-  hasher: Hasher[] = [];
+  hashers: Hasher[] = [];
   errorMessage: string = '';
   isLoading: boolean = true;
 
@@ -33,8 +16,8 @@ export class HasherListComponent implements OnInit{
 
   ngOnInit(){
     this.hasherService
-      .getAll() .subscribe(
-           /* happy path */ p => this.hasher = p,
+      .getAll().subscribe(
+           /* happy path */ p => this.hashers = p,
            /* error path */ e => this.errorMessage = e,
            /* onComplete */ () => this.isLoading = false);
   }

@@ -5,7 +5,8 @@ import { HasherService } from './hasher.service';
 @Component({
   selector: 'my-app',
   template: `
-  <h1> {{title}} </h1>
+  <body class="light-blue darken-1">
+  <h1><b> {{title}} </b></h1>
   <router-outlet>
   `,
   providers: [PeopleService, HasherService]

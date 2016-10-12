@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers} from '@angular/http';
 import { Observable } from 'rxjs/Rx';
-import { Hasher } from './hasher';
+import { Hasher } from './objects/hasher';
 
 @Injectable()
 export class HasherService{
@@ -37,8 +37,14 @@ function mapHashers(response:Response): Hasher[]{
 
 function toHasher(r:any): Hasher{
   let hasher = <Hasher>({
-    hasherId: r.haserId,
+    hasherId: r.hasherId,
     hashName: r.hashName,
+    nerdFirst: r.nerdFirst,
+    nerdLast: r.nerdLast,
+    anniversary: r.anniversary,
+    kennel: r.kennelName,
+    trailCount: r.trailCount,
+    haredCount: r.haredCount,
   });
   console.log('Parsed Hasher:', hasher);
   return hasher;
