@@ -18,11 +18,11 @@ const routes: Routes = [
     component: PersonDetailsComponent
   },
   // map '/' to '/persons' as our default route
-  {
-    path: '',
-    redirectTo: '/persons',
-    pathMatch: 'full'
-  },
+  // {
+  //   path: '',
+  //   redirectTo: '/persons',
+  //   pathMatch: 'full'
+  // },
   // map '/persons' to the people list component
   {
     path: '',
