@@ -25,8 +25,9 @@ const routes: Routes = [
   },
   // map '/persons' to the people list component
   {
-    path: 'hashers',
+    path: '/hashers',
     component: HasherListComponent,
+    pathMatch: 'full'
   },
 ];
 
