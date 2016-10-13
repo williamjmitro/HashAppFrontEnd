@@ -18,16 +18,15 @@ const routes: Routes = [
     component: PersonDetailsComponent
   },
   // map '/' to '/persons' as our default route
-  // {
-  //   path: '',
-  //   redirectTo: '/persons',
-  //   pathMatch: 'full'
-  // },
-  // map '/persons' to the people list component
   {
     path: '',
-    component: HasherListComponent,
+    redirectTo: '/hashers',
     pathMatch: 'full'
+  },
+  // map 'hashers' to the people list component
+  {
+    path: 'hashers',
+    component: HasherListComponent,
   },
 ];
 
