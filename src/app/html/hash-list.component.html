@@ -1,0 +1,10 @@
+<body class="blue-grey">
+<ul>
+<li *ngFor="let hasher of hashers">
+  <ul class="collection with-header grey lighten-2">
+    <li>Hash name: {{hasher.hashName}} Kennel: {{hasher.kennel}} Nerd name: {{hasher.nerdFirst}} {{hasher.nerdLast}}</li>
+    <li>Trail Count: {{hasher.trailCount}} Hared Count: {{hasher.haredCount}}</li>
+    <li>Anniversay: {{hasher.anniversary.getMonth()}}/{{hasher.anniversary.getDate()}}/{{hasher.anniversary.getFullYear()}}</li>
+  </ul>
+</li>
+</ul>
